@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>ä½�æ‰€æ¤œç´¢</title>
+        <title>住所検索API</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -71,14 +71,15 @@
                     Laravel
                 </div>
                 <div id="app">
-                    <form class="" action="{{ route('start') }}" method="get">
+                    <form class="" action="{{ route('start') }}" method="post">
                       @csrf
-                      <input type="text" name="first_code" value="">&nbsp;-&nbsp;<input type="text" name="last_code" value="">
-                      <button type="submit">郵便番号検索API</button>
+                      <input type="text" name="first_code[]" value="">&nbsp;-&nbsp;<input type="text" name="last_code[]" value="">
                       <hr>
-                      都道府県： <input type="text" value="">
-                      市区町村名： <input type="text" value="">
-                      それ以降： <input type="text" value="">
+                      <input type="text" name="first_code[]" value="">&nbsp;-&nbsp;<input type="text" name="last_code[]" value="">
+                      <hr>
+                      <input type="text" name="first_code[]" value="">&nbsp;-&nbsp;<input type="text" name="last_code[]" value="">
+                      <hr>
+                      <button type="submit">複数郵便番号検索API</button>
                     </form>
                   </div>
             </div>
